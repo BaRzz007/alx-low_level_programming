@@ -8,6 +8,6 @@
 
 int _putchar()
 {
-	write("_putchar\n");
+#write("_putchar\n");
 	return (0);
 }
