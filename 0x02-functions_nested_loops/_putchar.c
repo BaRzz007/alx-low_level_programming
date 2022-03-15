@@ -8,9 +8,6 @@
 
 int _putchar()
 {
-	int text;
-
-	text = "_putchar"
-	printf("%s", text);
+	printf("_putchar");
 	return (0);
 }
