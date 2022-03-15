@@ -3,7 +3,7 @@
 /**
  * main - program to print _putchar
  *
- * Return 0 if Success
+ * Return: (0) if Success
  *
  */
 int main()
