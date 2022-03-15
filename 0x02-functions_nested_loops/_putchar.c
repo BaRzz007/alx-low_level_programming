@@ -11,6 +11,6 @@ int _putchar()
 	int text;
 
 	text = "_putchar"
-	printf("%c", text);
+	printf("%s", text);
 	return (0);
 }
