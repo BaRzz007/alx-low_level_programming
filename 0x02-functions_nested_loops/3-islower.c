@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -11,9 +10,15 @@ int _islower(int c)
 {
 	int check;
 
-	check = islower(c);
-	if (check == 1)
-		return (1);
-	else
-		return (0);
+	while (c != EOF)
+	{
+		check ='a';
+		while (check <= 'z')
+		{
+			if (c == check)
+				return (1);
+			else
+				return (0);
+		}
+	}
 }
