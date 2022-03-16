@@ -9,7 +9,10 @@
  **/
 int _islower(int c)
 {
-	if (islower(c))
+	int check;
+
+	check = islower(c);
+	if (check == 1)
 		return (1);
 	else
 		return (0);
