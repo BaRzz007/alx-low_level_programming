@@ -10,15 +10,12 @@ int _islower(int c)
 {
 	int check;
 
-	while (c != EOF)
+	check = 'a';
+	while (check <= 'z')
 	{
-		check ='a';
-		while (check <= 'z')
-		{
-			if (c == check)
-				return (1);
-			else
-				return (0);
-		}
+		if (check == c)
+			return (1);
+		else
+			return (0);
 	}
 }
