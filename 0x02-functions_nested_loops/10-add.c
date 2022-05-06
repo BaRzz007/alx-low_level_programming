@@ -6,7 +6,7 @@
  * @m: second number
  * Return: @result if success
  */
-int add(n, m)
+int add(int n, int m)
 {
 	int result;
 
