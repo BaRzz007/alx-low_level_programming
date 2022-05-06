@@ -2,6 +2,7 @@
 
 /*
  * times_table - prints multiplication table up to nine
+ * Returns: null
  */
 void times_table(void)
 {
