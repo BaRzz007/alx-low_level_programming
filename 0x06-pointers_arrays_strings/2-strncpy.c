@@ -4,6 +4,7 @@
  * _strncpy - Copies n numbers of strings from src to dest
  * @src: source string
  * @dest: destination string
+ * @n: number of bytes to be copied
  *
  * Return: character pointer of dest
  */
@@ -18,6 +19,7 @@ char *_strncpy(char *dest, char *src, int n)
 	while (len < n)
 	{
 		dest[len] = '\0';
+		len++;
 	}
 	return (dest);
 }
