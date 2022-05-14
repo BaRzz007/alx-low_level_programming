@@ -16,16 +16,21 @@ char *cap_string(char *str)
 	{
 		if (state == 0)
 		{
-			upper = 'A';
-			for (lower = 'a'; lower <= 'z'; lower++)
+			if (str[i] >= '0' && str[i] <= '9')
+				state = 1;
+			else
 			{
-				if (str[i] == lower)
+				upper = 'A';
+				for (lower = 'a'; lower <= 'z'; lower++)
 				{
-					state = 1;
-					str[i] = upper;
-					break;
+					if (str[i] == lower || str[i] == upper)
+					{
+						state = 1;
+						str[i] = upper;
+						break;
+					}
+					upper++;
 				}
-				upper++;
 			}
 		}
 		else if (state == 1)
