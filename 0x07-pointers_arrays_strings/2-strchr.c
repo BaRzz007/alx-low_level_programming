@@ -10,18 +10,10 @@
  */
 char *_strchr(char *s, char c)
 {
-	int a;
-
-	while (1)
+	while (*s != c)
 	{
-		a = *(s + 1);
-		if (a == c)
-		{
-			return (s - 1);
-		}
-		if (a == 0)
-		{
+		if (!*s++)
 			return (NULL);
-		}
 	}
+	return (s);
 }
