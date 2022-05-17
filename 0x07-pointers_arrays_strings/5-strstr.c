@@ -22,7 +22,10 @@ char *_strstr(char *haystack, char *needle)
 		if (haystack[i] == needle[count])
 		{
 			if (count == size)
+			{
+				return (haystack + i);
 				break;
+			}
 			count++;
 		}
 		else if (haystack[i] != needle[count])
@@ -31,7 +34,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 	}
 	if (count == size)
-		return (haystack + (i - count));
+		return (haystack + i);
 	else
 		return (NULL);
 }
