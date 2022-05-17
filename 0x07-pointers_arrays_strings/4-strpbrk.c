@@ -24,7 +24,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	if (match == 1)
+	if (match == 0)
 		return (NULL);
 	else
 		return (s + i);
