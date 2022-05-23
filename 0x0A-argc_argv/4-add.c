@@ -1,46 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
- * add - Adds positive numbers
- * @n: array of numbers
- * Return: result of the addition
- */
-int add(int n, char *argv[])
-{
-	int sum, i;
-
-	sum = 0;
-	for (i = 0; i < n; i++)
-	{
-		sum = sum + argv[i];
-	}
-	return (sum);
-}
-
-/**
- * main - add positive numbers followed by a new line,
- * prints 0 if no argument is passed,
- * prints Error if a non-digit is passed.
- *
+ * main - adds positive numbers
  * @argc: argument count
- * @argv: array of string argument
- *
- * REturn: 0 if success, 1 if Error
+ * @argv: array of string arguments
+ * Return: 0 if success, 1 if Error
  */
 int main(int argc, char *argv[])
 {
-	int sum, i;
+	int i, sum;
 
-	sum = 0;
-	if (argc < 1)
+	if (argc < 2)
 	{
 		printf("0\n");
 		return (0);
 	}
+	sum = 0;
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi
+		if (_atoi(argv[i]) == '!')
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		{
+			sum = sum + _atoi(argv[i]);
+		}
 	}
+	printf("%d\n", sum);
+	return (0);
+}
+
+/**
+ * _atoi - converts string to integer
+ * @p: stirng to be converted
+ * Return: resulting integer, "!" if string contains non-digit character
+ */
+int _atoi(char *p)
+{
+	int i, n;
+
+	n = 0;
+	for (i = 0; p[i] != '\0'; i++)
+	{
+		if (p[i] >= '0' && p[i] <= '9')
+			n = (10 * n) + (p[i] - '0');
+		else
+			return ('!');
+	}
+	return (n);
 }
