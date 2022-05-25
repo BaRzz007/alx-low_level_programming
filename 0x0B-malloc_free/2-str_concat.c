@@ -34,7 +34,7 @@ char *str_concat(char *s1, char *s2)
 			size1++;
 		}
 	}
-	else
+	else if (size1 == NULL)
 		p[size1] = '\0';
 	size2 = 0;
 	if (s2)
@@ -46,7 +46,7 @@ char *str_concat(char *s1, char *s2)
 			size2++;
 		}
 	}
-	else
+	else if (size2 == NULL)
 		p[size1] = '\0';
 	p[size1] = '\0';
 	return (p);
