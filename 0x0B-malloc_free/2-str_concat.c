@@ -14,12 +14,14 @@ char *str_concat(char *s1, char *s2)
 	int i, j, size1, size2;
 	char *p;
 
+	i = 0;
 	while (s1[i] != '\0')
 		i++;
+	j = 0;
 	while (s2[j] != '\0')
 		j++;
 
-	p = malloc(sizeof(char) * (i + j) + 1);
+	p = malloc(sizeof(char) * (i + j + 1));
 
 	size1 = 0;
 	while (size1 < i)
