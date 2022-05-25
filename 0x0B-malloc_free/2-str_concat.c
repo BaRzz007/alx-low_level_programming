@@ -25,9 +25,9 @@ char *str_concat(char *s1, char *s2)
 	if (p == NULL)
 		return (NULL);
 
+	size1 = 0;
 	if (s1)
 	{
-		size1 = 0;
 		while (size1 < i)
 		{
 			p[size1] = s1[size1];
@@ -36,9 +36,9 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 		p[size1] = '\0';
+	size2 = 0;
 	if (s2)
 	{
-		size2 = 0;
 		while (size2 < (i + j))
 		{
 			p[size1] = s2[size2];
