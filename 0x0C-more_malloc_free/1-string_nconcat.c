@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
+#include <string.h>
 /**
  * string_nconcat - Concatinates two strings
  * @s1: First string
@@ -13,7 +12,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, len1, len2;
+	unsigned int i, j, len1, len2;
 	char *p;
 
 	len1 = len2 = 0;
@@ -22,19 +21,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2)
 		len2 = strlen(s2);
 
-	if (n >= len2)
-		p = malloc((sizeof(char) * len1) +
-				(sizeof(char) * len2) + 1);
+	if (n < len1)
+		p = malloc(sizeof(char) * (len1 + n + 1));
 	else
-		p = malloc((sizeof(char) * len1) +
-				(sizeof(char) * n) + 1);
+		p = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (p == NULL)
 		return (NULL);
 
 	for (i = 0; i < len1; i++)
 		p[i] = s1[i];
-	for (; i < n; i++)
-		p[i] = s2[n];
+	for (j = 0; j < n && j < len2; j++)
+	{
+		p[i] = s2[j];
+		i++;
+	}
+	p[i] = '\0';
 
 	return (p);
 }
