@@ -1,6 +1,7 @@
-#include "dog.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "dog.h"
+
 /**
  * init_dog - initializes a struct dog variable
  * @name: name of dog
@@ -10,15 +11,19 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d = malloc(sizeof(struct dog));
+	struct dog *p;
 
-	(*d).name = name;
-	(*d).age = age;
-	(*d).owner = owner;
+	p = &d;
+	p = malloc(sizeof(struct dog));
+
+	(*p).name = name;
+	(*p).age = age;
+	(*p).owner = owner;
+
 	/*
 	 * or do this without dereferencing + accessing with the '.' symbol
-	 * d->name = name;
-	 * d->age = age;
-	 * d->owner = owner;
+	 * p->name = name;
+	 * p->age = age;
+	 * p->owner = owner;
 	 */
 }
