@@ -14,34 +14,52 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr;
-	char *p_name, *p_owner;
-	unsigned int size1, size2, i;
+	/**char *p_name, *p_owner;**/
+	unsigned int size1, size2;
 
 	for (size1 = 0; name[size1] != '\0'; size1++)
 		;
 	for (size2 = 0; owner[size2] != '\0'; size2++)
 		;
 
-	p_name = malloc(sizeof(char) * size1 + 1);
-	p_owner = malloc(sizeof(char) * size2 + 1);
 	ptr = malloc(sizeof(dog_t));
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
 
-	for (i = 0; i < size1; i++)
+	ptr->name = malloc(sizeof(char) * (size1 + 1));
+	if (ptr->name == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
+	ptr->owner = malloc(sizeof(char) * (size2 + 1));
+	if (ptr->owner == NULL)
+	{
+		free(ptr);
+		free(ptr->name);
+		return (NULL);
+	}
+
+	/**for (i = 0; i < size1; i++)
 		p_name[i] = name[i];
 	for (i = 0; i < size2; i++)
 		p_owner[i] = owner[i];
 
-	if (ptr && p_name && p_owner)
-	{
-		ptr->name = p_name;
-		ptr->age = age;
-		ptr->owner = p_owner;
+	for (i = 0; name[i] != '\0'; i++)
+		p_name[i] = name[i];
+	p_name[i] = '\0';
 
-		free(p_name);
-		free(p_owner);
-		return (ptr);
-	}
-	free(p_name);
-	free(p_owner);
-	return (NULL);
+	for (i = 0; i < size2; i++)
+		p_owner[i] = owner[i];
+	i++;
+	p_owner[i] = '\0';**/
+
+	ptr->name = name;
+	ptr->age = age;
+	ptr->owner = owner;
+
+	return (ptr);
 }
