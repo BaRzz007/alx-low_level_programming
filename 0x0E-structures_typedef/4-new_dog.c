@@ -14,7 +14,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr;
-	unsigned int size1, size2;
+	unsigned int size1, size2, i;
 
 	size1 = strlen(*name);
 	size2 = strlen(*owner);
@@ -37,9 +37,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	for (i = 0; i < size1; i++)
-		p_name[i] = name[i];
+		p->name[i] = name[i];
 	for (i = 0; i < size2; i++)
-		p_owner[i] = owner[i];
+		p->owner[i] = owner[i];
 	for (i = 0; name[i] != '\0'; i++)
 		p->name[i] = name[i];
 	p->name[i] = '\0';
