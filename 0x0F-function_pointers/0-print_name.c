@@ -11,11 +11,17 @@ void print_name(char *name, void (*f)(char *))
 	int len;
 	char *p_name;
 
-	len = strlen(name);
-	p_name = malloc(sizeof(char) * (len + 1));
-	strcpy(p_name, name);
+	if (f)
+	{
+		len = strlen(name);
+		p_name = malloc(sizeof(char) * (len + 1));
+		if (!p_name)
+			return;
 
-	p_name[len + 1] = '\0';
+		strcpy(p_name, name);
 
-	(*f)(p_name);
+		p_name[len + 1] = '\0';
+
+		(*f)(p_name);
+	}
 }
