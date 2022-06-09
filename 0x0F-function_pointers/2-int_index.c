@@ -4,7 +4,7 @@
  * int_index - Returns index to the first element in array
  * that matches the int argument of the comparison
  * function
- * 
+ *
  * @array: array of int elements
  * @size: size of array
  * @cmp: compare function

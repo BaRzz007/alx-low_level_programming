@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * get_op_func - Gets the correct function to be used
@@ -22,8 +22,9 @@ int (*get_op_func(char *s))(int, int)
 	i = 0;
 	while (i < 6)
 	{
-		if (*s == ops[i].f)
+		if (*s == ops[i].op)
 			return (ops[i].f);
+		i++;
 	}
-	return (ops[5].f);
+	return (NULL);
 }
