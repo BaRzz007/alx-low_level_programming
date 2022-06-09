@@ -5,7 +5,7 @@
  * that matches the int argument of the comparison
  * function
  *
- * @array: array of int elements
+ * @arr: array of int elements
  * @size: size of array
  * @cmp: compare function
  *
