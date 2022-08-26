@@ -3,10 +3,8 @@ SRC = main.c school.c
 NAME = school
 OBJ = $(patsubst %.c, %.o, $(SRC))
 
-all: $(NAME)
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) -o $@ $^
-
-$(OBJ): $(SRC)
-
+%.o: %.c
+	$(CC) -c $^ -o $@
