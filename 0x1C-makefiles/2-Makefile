@@ -6,6 +6,7 @@ OBJ = $(patsubst %.c, %.o, $(SRC))
 all: $(NAME)
 
 $(NAME): $(OBJ)
+	$(CC) -o $@ $^
 
 $(OBJ): $(SRC)
 
