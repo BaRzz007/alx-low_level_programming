@@ -6,31 +6,29 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int offset;
-	int i;
+	unsigned long int offset;
+	int i, num_of_bits;
 
 	if (n == 0)
 		_putchar('0');
-	offset = 1 << 31;
+
+	offset = n;
+	num_of_bits = 0;
+	while (offset > 0)
+	{
+		offset = offset >> 1;
+		num_of_bits++;
+	}
+
+	offset = 1 << (num_of_bits - 1);
 	i = 0;
-	while (i < 32)
+	while (i < num_of_bits)
 	{
 		if ((n & offset) != 0)
-		{
-			while (i < 32)
-			{
-				if ((n & offset) != 0)
-					_putchar('1');
-				else
-					_putchar('0');
-				i++;
-				offset = offset >> 1;
-			}
-		}
+			_putchar('1');
 		else
-		{
-			i++;
-			offset = offset >> 1;
-		}
+			_putchar('0');
+		i++;
+		offset = offset >> 1;
 	}
 }
