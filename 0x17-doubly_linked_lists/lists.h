@@ -28,6 +28,6 @@ void free_dlistint(dlistint_t *head);
 dlistint_t *get_nodeint_at_index(dlistint_t *head, unsigned int index);
 int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
-int delete_dnode_at_index(dlistint_T **head, unsigned int index);
+int delete_dnode_at_index(dlistint_t **head, unsigned int index);
 
 #endif /* LISTS_H */
