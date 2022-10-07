@@ -20,6 +20,13 @@ int binary_search(int *array, size_t size, int value)
 	{
 		print_arr(array, size, i);
 		m = ((size - 1) + i) / 2;
+		/*count = i;
+		while (count  < (size - 1))
+		{
+			printf("%d, ", array[count]);
+			count++;
+		}
+		printf("%d\n", array[count]);*/
 
 		if (value > array[m])
 		{
