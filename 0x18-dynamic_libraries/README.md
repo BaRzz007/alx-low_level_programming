@@ -18,4 +18,10 @@ The **.c** source file needs to be prepared for use in a dynamic library. Since 
 The object files are now ready to be compiled into the dynamic library. This is done by compiling all the **.o** files by using the **-shared** flag. Later when compiling program files, the compiler identifies a library extension (**.so** for dynamic, **.a** for static). Therefore it's important to name a library accordingly.
 
 3. `export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH`
-Because a program needs to know where to look for library files, we must add that location to the environmental variable `LD_LIBRARY_PATH` - [Static Libraries vs. Dynamic Libraries](https://medium.com/@StueyGK/static-libraries-vs-dynamic-libraries-af78f0b5f1e4
+Because a program needs to know where to look for library files, we must add that location to the environmental variable `LD_LIBRARY_PATH` - [Static Libraries vs. Dynamic Libraries](https://medium.com/@StueyGK/static-libraries-vs-dynamic-libraries-af78f0b5f1e4)
+
+## Resources
+- [Static Libraries vs. Dynamic Libraries](https://medium.com/@StueyGK/static-libraries-vs-dynamic-libraries-af78f0b5f1e4)
+- [`man nm`]()
+- [`man lld`]()
+- [`man idconfig`]()
