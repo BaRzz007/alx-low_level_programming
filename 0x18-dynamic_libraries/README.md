@@ -20,6 +20,10 @@ The object files are now ready to be compiled into the dynamic library. This is 
 3. `export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH`
 Because a program needs to know where to look for library files, we must add that location to the environmental variable `LD_LIBRARY_PATH` - [Static Libraries vs. Dynamic Libraries](https://medium.com/@StueyGK/static-libraries-vs-dynamic-libraries-af78f0b5f1e4)
 
+
+## Using dynamic C libraries in python
+coming soon...
+
 ## Resources
 - [Static Libraries vs. Dynamic Libraries](https://medium.com/@StueyGK/static-libraries-vs-dynamic-libraries-af78f0b5f1e4)
 - [`man nm`]()
