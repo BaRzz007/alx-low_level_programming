@@ -1,4 +1,4 @@
-main.c
 a.out
-school.c
 school
+*.c
+*.o
