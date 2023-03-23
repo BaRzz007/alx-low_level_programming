@@ -4,7 +4,7 @@
 
 def island_perimeter(grid):
     """Function calculated the perimeter of an island in grid"""
-    if len(grid) < 0:
+    if len(grid) <= 0:
         return 0
 
     height = len(grid)
