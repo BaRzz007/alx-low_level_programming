@@ -8,7 +8,7 @@ all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) -f *~ $(NAME)
-cclean:
+oclean:
 	$(RM) -f $(OBJ)
 fclean: clean cclean
-re: cclean all
+re: oclean all
