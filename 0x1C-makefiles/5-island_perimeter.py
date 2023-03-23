@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Island perimeter module"""
 
+
 def island_perimeter(grid):
     """Function calculated the perimeter of an island in grid"""
     height = len(grid)
@@ -20,6 +21,6 @@ def island_perimeter(grid):
                 if (col == 0) or (col > 0 and grid[row][col - 1] == 0):
                     perimeter += 1
                 # check East
-                if (col == width) or (col < height and grid[row][col + 1] == 0):
+                if (col == width) or (col < width and grid[row][col + 1] == 0):
                     perimeter += 1
     return perimeter
