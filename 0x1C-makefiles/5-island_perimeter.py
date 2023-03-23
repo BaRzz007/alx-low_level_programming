@@ -23,7 +23,7 @@ def island_perimeter(grid):
                 # check South
                 if (row == height - 1):
                     perimeter += 1
-                if row < height - 1 and grid[row - 1][col] == 0:
+                if row < height - 1 and grid[row + 1][col] == 0:
                     perimeter += 1
 
                 # check West
