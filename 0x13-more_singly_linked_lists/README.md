@@ -1,1 +1,0 @@
-More singky linked list
